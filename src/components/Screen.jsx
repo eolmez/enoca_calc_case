@@ -1,7 +1,12 @@
 const Screen = ({ handleDelete, operand, answer, prevAnwser }) => {
   return (
     <div className="calc-screen">
-      <div className="calc-dark-mode">Dark</div>
+      <div className="calc-dark-mode">
+        <label class="switch">
+          <input type="checkbox" />
+          <span className="slider round"></span>
+        </label>
+      </div>
       <div className="calc-history-answer">{prevAnwser}</div>
       <div className="calc-compute">
         <button className="calc-reverse" value="rv" onClick={handleDelete}>
