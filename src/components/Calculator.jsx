@@ -122,14 +122,9 @@ function Calculator() {
   };
 
   return (
-    <div className="calculator">
-      <div className="calc-wrapper">
-        <Screen handleDelete={handleDelete} operand={operand} answer={answer} />
-        <Keyboard
-          handleOperator={handleOperator}
-          handleOperand={handleOperand}
-        />
-      </div>
+    <div className="calc-wrapper">
+      <Screen handleDelete={handleDelete} operand={operand} answer={answer} prevAnswer={prevAnswer}/>
+      <Keyboard handleOperator={handleOperator} handleOperand={handleOperand} />
     </div>
   );
 }

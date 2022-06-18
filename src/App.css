@@ -3,78 +3,48 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 22px;
 }
 
-.App {
-  display: grid;
-  grid-auto-rows: 539px;
-  padding: 1rem 0rem;
-}
-
 body {
+  height: 100vh;
   background-color: white;
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   grid-template-columns: 100%;
 }
 
-
-
 .container {
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container .calculator {
-  width: 423px;
-  height: 858px;
-  border-radius: 40px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-}
-
-
-
-button {
-  width: 70px;
-  height: 70px;
-  border: unset;
-  box-shadow: unset;
-  color: black;
-  cursor: pointer;
-  border-radius: 50%;
-  margin-top: 0.1rem;
 }
 
 .calc-wrapper {
   display: grid;
   height: 100%;
-  border-radius: 30px;
+  border-radius: 40px;
+  width: 423px;
+  height: 858px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.calc-type {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 0.5rem;
-  overflow: hidden;
-  background-color: white;
-  overflow: hidden;
-  border-radius: 40px 40px 0 0;
-}
-
-.calc-type button {
+button {
+  width: 70px;
+  height: 70px;
+  border: none;
+  box-shadow: none;
+  color: black;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-top: 0.1rem;
   padding: 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 400;
   transition: all 0.5s linear;
 }
 
@@ -87,10 +57,14 @@ button {
   transition: all 0.5s linear;
 }
 
+.calc-dark-mode {
+  align-self: center;
+}
+
 .calc-history-answer {
   padding: 0.2rem 1rem;
   border-radius: 0.5rem;
-  color: white;
+  color: black;
   font-weight: 300;
   font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -100,7 +74,6 @@ button {
   padding: 0.4rem 1rem;
   display: grid;
   grid-template-columns: minmax(0px, 50px) repeat(2, 1fr);
-
   font-size: 1.8rem;
   font-weight: 300;
   transition: all 0.5s linear;
@@ -109,17 +82,20 @@ button {
 
 .calc-answer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   margin-bottom: 0.5rem;
   font-size: 3rem;
   font-weight: 900;
 }
+.equals {
+  margin-right: 14rem;
+}
 
 .calc-compute span {
   letter-spacing: 0.1rem;
-  color: var(--default-text-color);
+  color: black;
   word-wrap: break-word;
   word-break: break-all;
   grid-column: span 2;
@@ -131,10 +107,7 @@ button {
 .calc-compute > button {
   background-color: unset;
   font-size: 1.2rem;
-  color: var(--default-text-color);
 }
-
-
 
 .calc-grid {
   display: grid;
@@ -144,37 +117,13 @@ button {
   background-color: #8ad3fd;
 }
 
-.calc-grid > button {
-  cursor: pointer;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.5s linear;
-  text-transform: uppercase;
-  background: #ffffff66;
-}
-
 .calc-grid > button:hover {
   background-color: rgba(255, 255, 255, 0.2) !important;
 }
-
-.span-two {
-  grid-column: span 2;
-}
-
-
-
 
 @media screen and (min-width: 768px) {
   body {
     height: 100vh;
     overflow: hidden;
   }
-
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-    padding: unset;
-    width: 750px;
-  }
 }
-
